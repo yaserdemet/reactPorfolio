@@ -29,15 +29,15 @@ function Projects() {
           My Recent <strong className="purple">Works </strong>
         </h1>
         <p style={{ color: "white" }}>
-          Here are a few projects I've worked on recently.
+          Here are a few projects. You can find more of them in my Github Account.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={movie}
               isBlog={false}
-              title="Movie App"
-              description="In this project I have build a movie app by using React.js Context API and firebase. Get information with api and display it in a list. Also, I have used react-bootstrap and react-router-dom for routing. To see the details of the movie, visitors need to login with Goole account or create an account. "
+              title="Movie App React"
+              description="In this project I have build a movie app by using React.js Context API and firebase. Get information with api and display it in a list. Also, I have used react-bootstrap and react-router-dom for routing. To see the details of the movie, visitors need to login with Goole account or create an account. I hold my api key in .env file. And used vercel and netlify for deployment."
               ghLink="https://github.com/yaserdemet/movieApp-react"
               demoLink="https://movie-app-react-68y1ey1wk-yaserdemet.vercel.app"
             />
@@ -48,7 +48,7 @@ function Projects() {
               imgPath={avatar}
               isBlog={false}
               title="Avatar React Router"
-              description="This project was created with React.js and React-Router-DOM. Nested routes are used to navigate between pages. Used hooks such as useState useEffect useParams and useNavigate. Information and avatars comes from api by axios and is displayed in a list. "
+              description="This project was created with React.js and React-Router-DOM. Nested routes are used to navigate between pages. Used hooks such as useState useEffect useParams and useNavigate. Information and avatars comes from api by axios and is displayed in a list. Third part library which is Toastify is used for notification  "
               ghLink="https://github.com/yaserdemet/router-avatar-react"
               demoLink="https://router-avatar-react-4k9oqa6a5-yaserdemet.vercel.app"
             />
@@ -59,12 +59,10 @@ function Projects() {
               imgPath={rec}
               isBlog={false}
               title="Menu App React"
-              description="This project was created with React.js and React-Bootstrap. Menu is displayed in a list. When user clicks on the menu, it will display the details of the menu. When user search a meal, set inputs info in state and fetch the meal information by axios.  "
-            
+              description="This project was created with React.js and React-Router-Dom. If user want to see details, login or register is required. Menu is displayed in a list. When user clicks on the menu, it will display the details of the menu. When user search a meal, set inputs info in state and fetch the meal information by axios. And used vercel and netlify for deployment. "
               ghLink="https://github.com/yaserdemet/meal-router"
               demoLink="https://meal-react-router.vercel.app"
             />
-            
           </Col>
 
           <Col md={4} className="project-card">
@@ -72,7 +70,7 @@ function Projects() {
               imgPath={github}
               isBlog={false}
               title="Github Users Router"
-              description="Used react-router-dom, bootstrap.js and axios to fetch github users and display them in a list. Global State Management ( Context Api ).  Crypto apiKeys in .env files. Deployment with Vercel and Netlify"
+              description="This project has contain many feature of React.js. Have used hooks such as useState useEffect to get data from api when doing this to ensure to handle with any in case of error used try catch structure, useParams to get the user id and useNavigate to navigate between pages. Multipage application is created by using react-router-dom. And Github Pages is used for deployment."
               ghLink="https://github.com/yaserdemet/ghUsers-router"
               demoLink="https://github.com/yaserdemet/ghUsers-router"
             />
@@ -83,7 +81,7 @@ function Projects() {
               imgPath={task}
               isBlog={false}
               title="Task Tracker React"
-              description="Using 'Natural Launguage Processing' for the detection of suicide-related posts and user's suicide ideation in cyberspace  and thus helping in sucide prevention."
+              description="I have made similiar todo project with pure Js. But with react it is more easy to use. Practiced many of react features such as conditional rendering, prop and component logic, js iteration methods, and react hooks such as useState useEffect. "
               ghLink="https://github.com/yaserdemet/Task-Tracker-React"
               demoLink="https://task-tracker-react-djmdf739g-yaserdemet.vercel.app"
             />
@@ -106,8 +104,7 @@ function Projects() {
               imgPath={tour}
               isBlog={false}
               title="Tour Project React"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="This is my first React project. In this project i used iteration method to get data from static JSON format and display it in a list. Get data in main component and iterate it in child component. Used props, components, conditional rendering and state to display data in a list. Last of all used css styling to make the project look aluring."
               ghLink="https://github.com/yaserdemet/Styled-Component-React"
               demoLink="https://github.com/yaserdemet/Styled-Component-React"
             />
@@ -117,8 +114,7 @@ function Projects() {
               imgPath={pure}
               isBlog={false}
               title="Pure Js To Do List"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="To do list is created with pure javascript and Dom manipulation. When user want to add some task to the list, user can type the task and press enter. When user want to delete a task, user can click on the task and press delete button. Sound effect is played when user add a task. Conditional icons are used to show the status of the task.  "
               ghLink="https://github.com/yaserdemet/to-do-list"
               demoLink="https://yaserdemet.github.io/to-do-list/"
             />
@@ -128,8 +124,7 @@ function Projects() {
               imgPath={stone}
               isBlog={false}
               title="Stone Paper Scissors Vanilla JS"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="This game was created with vanilla js. Dom manipulation and build in functions of javascript was used in this game. Dark and light mode was created with toggle logic. The game is played with a computer and a player. The computer randomly selects a stone, paper or scissors. The player then selects the same stone, paper or scissors and the game is played. The winner is displayed."
               ghLink="https://github.com/yaserdemet/stone-paper-js"
               demoLink="https://yaserdemet.github.io/stone-paper-js/"
             />
@@ -139,11 +134,10 @@ function Projects() {
               imgPath={ios}
               isBlog={false}
               title="IOS Calculator Vanilla JS"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="This project's static part was created Html and Css grid system. The dynamic part was created with Vanilla JS. The calculator was created with the help of the 'mathjs' library. Dom manipulation and its method which is capturing was used to display the result of the calculation."
               ghLink="https://github.com/yaserdemet/stone-paper-js"
               demoLink="https://yaserdemet.github.io/stone-paper-js/"
-              seeMore = "dwadawd"
+              seeMore="dwadawd"
             />
           </Col>
           <Col md={4} className="project-card">
@@ -151,8 +145,7 @@ function Projects() {
               imgPath={guess}
               isBlog={false}
               title="Guess The Number Vanilla JS"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="This is vanilla (pure) javascript game. I have used DOM (Document Object Material). Catched class and ids from HTML file and add them addEventListeners. The game is played by guessing a number between 1 and 100. The user has to guess the number and the computer will tell the user if the guess is higher or lower than the number. The user will have 5 chances to guess the number. The user will have to guess the number in less than 1 second. The game will be played in a browser."
               ghLink="hhttps://github.com/yaserdemet/guess-number-js"
               demoLink="https://yaserdemet.github.io/guess-number-js/"
             />
@@ -173,8 +166,7 @@ function Projects() {
               imgPath={bootstrap}
               isBlog={false}
               title="Bootstrap Carousel"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="Bootstrap Carousel is a responsive image carousel. It is a great way to showcase your work portfolio or just some images. Many features of Bootstrap was used in this project cards, buttons, navbar, carausel and grid system."
               ghLink="https://github.com/yaserdemet/carousel-bs-project"
               demoLink="https://yaserdemet.github.io/carousel-bs-project/"
             />
@@ -184,8 +176,7 @@ function Projects() {
               imgPath={sass}
               isBlog={false}
               title="Sass Portfolio"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="In this project i used SASS to style the portfolio page. The project is responsive and works on all devices. Break into many folders to make it easier to manage files and read them easily. Sass's many features are used such as mixins, variables, nested rules, media queries, and more."
               ghLink="hhttps://github.com/yaserdemet/guess-number-js"
               demoLink="https://yaserdemet.github.io/guess-number-js/"
             />
@@ -195,8 +186,7 @@ function Projects() {
               imgPath={bs2}
               isBlog={false}
               title="Bootstrap Page"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="In this project i used bootstrap' colors, cards, container, row structure and grid system to make fully responsive for all device. form elements."
               ghLink="https://github.com/yaserdemet/boostrap2-project"
               demoLink="https://yaserdemet.github.io/boostrap2-project/"
             />
@@ -206,8 +196,11 @@ function Projects() {
               imgPath={parallax}
               isBlog={false}
               title="Parallax Page"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="To make parallax page gave background img to container. Then
+              background-attachment:fixed;
+              background-position:center;
+              background-repeat:no-repeat;
+              background-size:cover;"
               ghLink="https://github.com/yaserdemet/boostrap2-project"
               demoLink="https://yaserdemet.github.io/parallax-website/"
             />
@@ -217,8 +210,7 @@ function Projects() {
               imgPath={netflix}
               isBlog={false}
               title="Netflix Login Page"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="This page clone the Netflix login page. The page is fully responsive and works on all devices. The page is built with HTML, CSS."
               ghLink="https://github.com/yaserdemet/netflix"
               demoLink="https://yaserdemet.github.io/netflix/"
             />
@@ -228,8 +220,7 @@ function Projects() {
               imgPath={google}
               isBlog={false}
               title="Google Landing Page"
-              description="Trained a CNN classifier using 'FER-2013 dataset' with Keras and tensorflow backened. The classifier sucessfully predicted the various types of emotions of human. And the highest accuracy obtained with the model was 60.1%.
-              Then used Open-CV to detect the face in an image and then pass the face to the classifer to predict the emotion of a person."
+              description="This is a landing page for Google. It is a simple landing page with a search bar and a sign in button. The user can search for a website and sign in to Google."
               ghLink="https://github.com/yaserdemet/Google-Page"
               demoLink="https://github.com/yaserdemet/Google-Page"
             />
