@@ -1,5 +1,5 @@
-## To make animation writing first import Typewriter from "typewriter-effect"
-
+## To make animation writing first; 
+- import Typewriter from "typewriter-effect"
 
 
 ```
