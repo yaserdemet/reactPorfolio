@@ -19,7 +19,6 @@ function Home2() {
               LET ME <span className="purple"> INTRODUCE </span> MYSELF
             </h1>
             <p className="home-about-body">
-              
               <br />
               <br />I am fluent in classics like
               <i>
@@ -35,16 +34,16 @@ function Home2() {
               </i>
               <br />
               <br />
-             
               <i>
                 <b className="purple">
                   {" "}
-                  Modern Javascript Library and Frameworks
+                  Modern Javascript, Python library and frameworks 
+                 
                 </b>
               </i>
               &nbsp; like
               <i>
-                <b className="purple"> React.js </b>
+                <b className="purple"> React.js and Django </b>
               </i>
             </p>
           </Col>
@@ -82,7 +81,6 @@ function Home2() {
                   <FaLinkedinIn />
                 </a>
               </li>
-             
             </ul>
           </Col>
         </Row>
