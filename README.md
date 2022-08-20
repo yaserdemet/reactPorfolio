@@ -1,3 +1,8 @@
+
+
+![Animation](https://user-images.githubusercontent.com/99739515/185765428-ae544d6b-a615-4572-a9e3-7967d588e7a3.gif)
+
+
 ## To make animation writing first; 
 - import Typewriter from "typewriter-effect"
 
