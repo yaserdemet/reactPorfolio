@@ -1,6 +1,37 @@
 
 
-![Animation](https://user-images.githubusercontent.com/99739515/185765428-ae544d6b-a615-4572-a9e3-7967d588e7a3.gif)
+
+![Animation](https://user-images.githubusercontent.com/99739515/185923125-9b95c63b-d886-4ff3-a0e9-4c5bb8068b59.gif)
+
+
+[📍 click here to check my personel website](https://react-porfolio-f8hvf3gwl-yaserdemet.vercel.app/project)
+
+##### In this project i have inspired popular react project in Github repos, adapt it according to myself and added new features.
+### What i used;
+👉 React Router Dom
+
+👉 Props and Component Logic
+
+👉 Conditional Rendering
+
+👉 React Hooks
+
+👉 3rd party libraries
+
+👉 React icons
+
+👉 Js iteration methods.
+
+👉 Sass Css
+
+👉 Css animation
+
+👉 Bootstrap 
+
+👉 TypeWriter and Github Calendar 
+
+👉 Deployment with Vercel and Netlify
+
 
 
 ## To make animation writing first; 
