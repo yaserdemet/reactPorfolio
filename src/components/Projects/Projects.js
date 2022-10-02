@@ -32,6 +32,49 @@ function Projects() {
           Here are a few projects. You can find more of them in my Github Account.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+
+
+        <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath="https://user-images.githubusercontent.com/99739515/191304833-6e9b8956-d9e2-4b84-8e01-f0928194b0b4.gif"
+              isBlog={false}
+              title="ThreeJs-React WeatherApp"
+              description="In this project I have build a weather app by using ThreeJs and React.Get information with api and display it in a list. Also, I have used Material Ui, SASS for styling and also react-router-dom for routing. You can visit all around of earth and check weather wherever you want. As state management, i have used contextApi. 3rd part libraries such as axios toastify autoanimation"
+              ghLink="https://github.com/yaserdemet/react-threeJs"
+              demoLink="https://react-weather-app-sigma-silk.vercel.app"
+            />
+          </Col>
+
+
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath="https://user-images.githubusercontent.com/99739515/189138222-195e59d7-a3ce-4ddc-ba6a-d8a1396bcbd9.gif"
+              isBlog={false}
+              title="NextJs Ricky and Morty"
+              description="This project was built with nextJs. In this project i have used nextAuth to login, Next-i18next library for translation, NextRouter for multi dynamc page application, Material Ui and module.css for styling, server side rendering, Layout and reuseable components,  "
+              ghLink="https://github.com/yaserdemet/nextjs_rick_morty"
+              demoLink="https://github.com/yaserdemet/nextjs_rick_morty"
+            />
+          </Col>
+
+
+          
+          <Col md={4} className="project-card">
+            <ProjectCard
+              imgPath="https://user-images.githubusercontent.com/99739515/186932343-eaeeb885-ef78-4577-ae5e-24777bcb0a04.gif"
+              isBlog={false}
+              title="React Getir"
+              description="This project aims to clone famous Getir clone with React. Following topics have been covered; props and state logic, conditional rendering, React hooks, 3rd party libraries such as axios, toastify, reactFlags. For styling Material UI and Bootstrap was used. For Seo optimization Helmet Hook was used"
+              ghLink="https://github.com/yaserdemet/React-getirClone"
+              demoLink="https://react-getir-clone-beta.vercel.app"
+            />
+          </Col>
+
+
+
+
+
+
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={movie}
