@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
@@ -8,7 +8,6 @@ import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
 import { useTranslation } from "react-i18next";
-import 'flag-icons/css/flag-icons.min.css';
 
 import {
   AiFillStar,
@@ -31,7 +30,13 @@ function NavBar() {
     }
   }
 
-  window.addEventListener("scroll", scrollHandler);
+  useEffect(() => {
+    window.addEventListener("scroll", scrollHandler);
+
+    return () => {
+      window.removeEventListener("scroll", scrollHandler);
+    };
+  }, []);
 
   return (
     <Navbar
@@ -41,7 +46,6 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-       
         <Navbar.Toggle
           aria-controls="responsive-navbar-nav"
           onClick={() => {
@@ -86,13 +90,15 @@ function NavBar() {
             <Nav.Item>
               <Dropdown>
                 <Dropdown.Toggle variant="outline-light" id="language-dropdown">
-                  <span className={`fi fi-${currentLang === 'en' ? 'us' : 'tr'}`}></span>
+                  <span
+                    className={`fi fi-${currentLang === "en" ? "us" : "tr"}`}
+                  ></span>
                 </Dropdown.Toggle>
                 <Dropdown.Menu>
-                  <Dropdown.Item onClick={() => i18n.changeLanguage('en')}>
+                  <Dropdown.Item onClick={() => i18n.changeLanguage("en")}>
                     <span className="fi fi-us"></span> English
                   </Dropdown.Item>
-                  <Dropdown.Item onClick={() => i18n.changeLanguage('tr')}>
+                  <Dropdown.Item onClick={() => i18n.changeLanguage("tr")}>
                     <span className="fi fi-tr"></span> Türkçe
                   </Dropdown.Item>
                 </Dropdown.Menu>
