@@ -20,7 +20,7 @@ import {
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
-  const { t, i18n } = useTranslation();
+  const { t, i18n } = useTranslation("navbar");
   const currentLang = i18n.language;
 
   function scrollHandler() {

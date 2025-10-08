@@ -2,10 +2,9 @@ import i18n from "i18next";
 import { initReactI18next } from "react-i18next";
 import resources from "./config";
 
-const defaultLng = "en";
-  // localStorage.getItem("i18nextLng") ||
-  // (navigator.language || navigator.userLanguage || "en").split("-")[0] ||
-  // "en";
+const defaultLng = localStorage.getItem("i18nextLng") ||
+  (navigator.language || navigator.userLanguage || "en").split("-")[0] ||
+  "en";
 
 i18n.use(initReactI18next).init({
   resources,
