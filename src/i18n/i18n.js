@@ -1,40 +1,28 @@
-import i18n from 'i18next';
-import { initReactI18next } from 'react-i18next';
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import resources from "./config";
 
-// the translations
-// (tip: move them in a JSON file and import them,
-// or even better, manage them separated from your code: https://react.i18next.com/guides/multiple-translation-files)
-const resources = {
-  en: {
-    translation: {
-      "Home": "Home",
-      "About": "About",
-      "Projects": "Projects"
-    }
+const defaultLng = "en";
+  // localStorage.getItem("i18nextLng") ||
+  // (navigator.language || navigator.userLanguage || "en").split("-")[0] ||
+  // "en";
+
+i18n.use(initReactI18next).init({
+  resources,
+  fallbackLng: "en",
+  lng: defaultLng,
+  interpolation: {
+    escapeValue: false, // react already does escaping
   },
-  tr: {
-    translation: {
-      "Home": "Ana Sayfa",
-      "About": "Hakkımda",
-      "Projects": "Projeler"
-    }
+});
+
+// persist language selection
+i18n.on("languageChanged", (lng) => {
+  try {
+    localStorage.setItem("i18nextLng", lng);
+  } catch (e) {
+    console.error("Could not store language preference", e);
   }
-};
-
-i18n
-  // pass the i18n instance to react-i18next.
-  .use(initReactI18next)
-  // init i18next
-  // for all options read: https://www.i18next.com/overview/configuration-options
-  .init({
-    resources,
-    lng: 'en', // language to use, more info here: https://www.i18next.com/overview/configuration-options#languages-namespaces-resources
-    // you can use the i18n.changeLanguage function to change the language manually: https://www.i18next.com/overview/api#changelanguage
-    // if you're using a language detector, do not define the lng option
-
-    interpolation: {
-      escapeValue: false // react already does escaping
-    }
-  });
+});
 
 export default i18n;
