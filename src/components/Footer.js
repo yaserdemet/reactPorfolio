@@ -1,10 +1,7 @@
 import { useState, useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import axios from "axios";
-import {
-  AiFillGithub,
-
-} from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { useTranslation } from "react-i18next";
 import { BASE_URL } from "../config/env";
@@ -14,6 +11,7 @@ function Footer() {
   let year = date.getFullYear();
   const [position, setPosition] = useState();
   const { t, i18n } = useTranslation("footer");
+  console.log(position);
   useEffect(() => {
     // navigator.geolocation.getCurrentPosition(position => {
     //   setPosition(position.coords);
@@ -21,19 +19,16 @@ function Footer() {
     // const data = fetch("https://ipapi.co/json/")
     //   .then((res) => res.json())
     //   .then((data) => console.log(data));
-    
-      const getPosition = async () => {
-        try {
-          const response  = await axios.get(`${BASE_URL}/json/`);
-          setPosition(response.data);
-          
-        }
-        catch (error) {
-          console.error("Error fetching geolocation data:", error);
-        }
-      }
-      getPosition()
 
+    const getPosition = async () => {
+      try {
+        const response = await axios.get(`${BASE_URL}/json/`);
+        setPosition(response.data);
+      } catch (error) {
+        console.error("Error fetching geolocation data:", error);
+      }
+    };
+    getPosition();
   }, []);
 
   return (
@@ -43,7 +38,9 @@ function Footer() {
           <h3>Designed and Developed by Yaser DEMET</h3>
         </Col>
         <Col md="4" className="footer-copywright">
-          <h3>{t("Copyright")} © {year}</h3>
+          <h3>
+            {t("Copyright")} © {year}
+          </h3>
         </Col>
         <Col md="4" className="footer-body">
           <ul className="footer-icons">
@@ -73,10 +70,8 @@ function Footer() {
       </Row>
       <Row>
         <Col md="12" className="footer-copywright">
-          <h3>{position ? `${t("Location")}: ${position.city}, ${position.country_name}` : t("LoadingLocation")}</h3>
+          <h3>{`${position?.region}/${position?.country_name}`}</h3>
         </Col>
-       
-       
       </Row>
     </Container>
   );
