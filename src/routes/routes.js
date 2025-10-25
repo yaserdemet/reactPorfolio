@@ -1,16 +1,14 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import Home from "../components/Home/Home";
-import Projects from "../components/Projects/Projects";
-import About from "../components/About/About";
+import { HomePage, ProjectPage, AboutPage } from "./element";
 
-function path (root, sublink){
-    return `${root}${sublink}`
+function path(root, sublink) {
+  return `${root}${sublink}`;
 }
 const routes = [
-  { path: path("", "/"), element: <Home /> },
-  { path: path("", "/project"), element: <Projects /> },
-  { path: path("", "/about"), element: <About /> },
+  { path: path("", "/"), element: <HomePage /> },
+  { path: path("", "/project"), element: <ProjectPage /> },
+  { path: path("", "/about"), element: <AboutPage /> },
   { path: path("", "*"), element: <Navigate to="/" /> },
 ];
 
