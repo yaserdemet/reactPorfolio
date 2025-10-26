@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import routes from "./routes";
+import routes from "./routes/routes";
 import "./i18n/i18n";
 import {
   BrowserRouter as Router,
@@ -14,27 +14,11 @@ import ScrollToTop from "./components/ScrollToTop";
 import "./style.scss";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import useCheckOnline from "./hooks/useCheckOnline";
 
 function App() {
   const [load, upadateLoad] = useState(true);
-  const [online, setIsOnline] = useState(navigator.onLine);
-
-  useEffect(() => {
-    if (!navigator.onLine) {
-      setIsOnline(false);
-      alert(
-        "You are currently offline. Please check your internet connection."
-      );
-    }
-    window.addEventListener("online", handleOnline);
-    window.addEventListener("offline", handleOffline);
-
-    // Cleanup event listeners
-    return () => {
-      window.removeEventListener("online", handleOnline);
-      window.removeEventListener("offline", handleOffline);
-    };
-  }, [online]);
+  const [online] = useCheckOnline();
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -43,16 +27,6 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
-
-  const handleOnline = () => {
-    setIsOnline(true);
-    alert("You are back online!");
-  };
-
-  const handleOffline = () => {
-    setIsOnline(false);
-    alert("You are currently offline. Please check your internet connection.");
-  };
 
   return (
     <Router>

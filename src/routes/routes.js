@@ -1,8 +1,8 @@
 import React from "react";
 import { Navigate } from "react-router-dom";
-import Home from "./components/Home/Home";
-import About from "./components/About/About";
-import Projects from "./components/Projects/Projects";
+import Home from "../components/Home/Home";
+import Projects from "../components/Projects/Projects";
+import About from "../components/About/About";
 
 function path (root, sublink){
     return `${root}${sublink}`
