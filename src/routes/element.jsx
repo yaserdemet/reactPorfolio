@@ -1,8 +1,9 @@
 import { Suspense, lazy } from 'react';
+import Pre from '../components/Pre';
 
 const Loadable = (Component) => (props) => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<Pre load={true} />}>
       <Component {...props} />
     </Suspense>
   );
