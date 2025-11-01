@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import Container from "react-bootstrap/Container";
+import Dropdown from "react-bootstrap/Dropdown";
 
 import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 import { CgGitFork } from "react-icons/cg";
+import { useTranslation } from "react-i18next";
+import 'flag-icons/css/flag-icons.min.css';
 
 import {
   AiFillStar,
@@ -17,6 +20,8 @@ import {
 function NavBar() {
   const [expand, updateExpanded] = useState(false);
   const [navColour, updateNavbar] = useState(false);
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
 
   function scrollHandler() {
     if (window.scrollY >= 20) {
@@ -51,7 +56,7 @@ function NavBar() {
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
-                <AiOutlineHome style={{ marginBottom: "2px" }} /> Home
+                <AiOutlineHome style={{ marginBottom: "2px" }} /> {t("Home")}
               </Nav.Link>
             </Nav.Item>
 
@@ -61,7 +66,7 @@ function NavBar() {
                 to="/about"
                 onClick={() => updateExpanded(false)}
               >
-                <AiOutlineUser style={{ marginBottom: "2px" }} /> About
+                <AiOutlineUser style={{ marginBottom: "2px" }} /> {t("About")}
               </Nav.Link>
             </Nav.Item>
 
@@ -74,13 +79,25 @@ function NavBar() {
                 <AiOutlineFundProjectionScreen
                   style={{ marginBottom: "2px" }}
                 />{" "}
-                Projects
+                {t("Projects")}
               </Nav.Link>
             </Nav.Item>
 
-          
-
-           
+            <Nav.Item>
+              <Dropdown>
+                <Dropdown.Toggle variant="outline-light" id="language-dropdown">
+                  <span className={`fi fi-${currentLang === 'en' ? 'us' : 'tr'}`}></span>
+                </Dropdown.Toggle>
+                <Dropdown.Menu>
+                  <Dropdown.Item onClick={() => i18n.changeLanguage('en')}>
+                    <span className="fi fi-us"></span> English
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => i18n.changeLanguage('tr')}>
+                    <span className="fi fi-tr"></span> Türkçe
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+              </Dropdown>
+            </Nav.Item>
 
             <Nav.Item className="fork-btn">
               <Button

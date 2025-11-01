@@ -3,6 +3,7 @@ import Preloader from "../src/components/Pre";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import routes from "./routes";
+import "./i18n";
 
 import {
   BrowserRouter as Router,
