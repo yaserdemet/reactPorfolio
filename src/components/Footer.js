@@ -11,7 +11,7 @@ function Footer() {
   let year = date.getFullYear();
   const [position, setPosition] = useState();
   const { t, i18n } = useTranslation("footer");
-  console.log(position);
+  
   useEffect(() => {
     // navigator.geolocation.getCurrentPosition(position => {
     //   setPosition(position.coords);

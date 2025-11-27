@@ -17,6 +17,24 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   const [load, upadateLoad] = useState(true);
+  const [online, setIsOnline] = useState(navigator.onLine);
+
+  useEffect(() => {
+    if (!navigator.onLine) {
+      setIsOnline(false);
+      alert(
+        "You are currently offline. Please check your internet connection."
+      );
+    }
+    window.addEventListener("online", handleOnline);
+    window.addEventListener("offline", handleOffline);
+
+    // Cleanup event listeners
+    return () => {
+      window.removeEventListener("online", handleOnline);
+      window.removeEventListener("offline", handleOffline);
+    };
+  }, [online]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
@@ -25,6 +43,16 @@ function App() {
 
     return () => clearTimeout(timer);
   }, []);
+
+  const handleOnline = () => {
+    setIsOnline(true);
+    alert("You are back online!");
+  };
+
+  const handleOffline = () => {
+    setIsOnline(false);
+    alert("You are currently offline. Please check your internet connection.");
+  };
 
   return (
     <Router>
