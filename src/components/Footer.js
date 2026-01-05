@@ -1,4 +1,4 @@
-import React from "react";
+import {useState, useEffect} from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import {
   AiFillGithub,
@@ -11,7 +11,16 @@ import { useTranslation } from "react-i18next";
 function Footer() {
   let date = new Date();
   let year = date.getFullYear();
+  const [position, setPosition] = useState()
     const { t, i18n } = useTranslation("footer");
+
+    useEffect(() => {
+      navigator.geolocation.getCurrentPosition(position => {
+        setPosition(position.coords);
+      })
+      
+    },[])
+ 
   
   return (
     <Container fluid className="footer">
