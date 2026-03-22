@@ -15,6 +15,7 @@ import "./style.scss";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import useCheckOnline from "./hooks/useCheckOnline";
+import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -33,12 +34,14 @@ function App() {
       <Preloader load={load} />
       <div className="App" id={load ? "no-scroll" : "scroll"}>
         <Navbar />
+      
         <ScrollToTop />
         <Routes>
           {routes.map((route, index) => (
             <Route key={index} path={route.path} element={route.element} />
           ))}
         </Routes>
+          <Analytics />
         <Footer />
       </div>
     </Router>
