@@ -8,7 +8,6 @@ import {
   BrowserRouter as Router,
   Route,
   Routes,
-  Navigate,
 } from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import "./style.scss";
@@ -19,7 +18,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 function App() {
   const [load, upadateLoad] = useState(true);
-  const [online] = useCheckOnline();
+  useCheckOnline();
 
   useEffect(() => {
     const timer = setTimeout(() => {

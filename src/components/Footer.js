@@ -10,7 +10,7 @@ function Footer() {
   let date = new Date();
   let year = date.getFullYear();
   const [position, setPosition] = useState();
-  const { t, i18n } = useTranslation("footer");
+  const { t } = useTranslation("footer");
   
   useEffect(() => {
     // navigator.geolocation.getCurrentPosition(position => {
@@ -60,7 +60,7 @@ function Footer() {
                 href="https://www.linkedin.com/in/yaser-demet/"
                 style={{ color: "white" }}
                 target="_blank"
-                // rel="noopener noreferrer"
+                rel="noopener noreferrer"
               >
                 <FaLinkedinIn />
               </a>
