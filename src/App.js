@@ -15,6 +15,7 @@ import "./style.scss";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import useCheckOnline from "./hooks/useCheckOnline";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const [load, upadateLoad] = useState(true);
@@ -41,6 +42,7 @@ function App() {
         </Routes>
         <Footer />
       </div>
+      <Analytics />
     </Router>
   );
 }
